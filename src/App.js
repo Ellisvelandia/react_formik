@@ -13,16 +13,16 @@ function App() {
     confirm_password: "",
   };
 
-  const validationschema = Yup.object().shape({
+  const validationSchema = Yup.object().shape({
     name: Yup.string().required("Required"),
     email: Yup.string().required("Required").email("Invalid email"),
     password: Yup.string()
       .required("Required")
       .matches(/[A-Z]/, "Must have at least one capital letter")
-      .min(8, "password too short"),
+      .min(8, "Password Too short"),
     confirm_password: Yup.string()
       .required("Required")
-      .oneOf([Yup.ref("password")], "password do not match"),
+      .oneOf([Yup.ref("password")], "Passwords do not match"),
   });
 
   const handleSubmit = (values) => {
@@ -31,13 +31,13 @@ function App() {
 
   return (
     <>
-      <div className="bg-gradient-to-tr from-blue-700 to-amber-400 h-full w-full absolute  ">
+      <div className="bg-gradient-to-tr from-blue-600 to-amber-300 h-full w-full  absolute -z-50">
         <video
           id="myVideo"
           autoPlay
           loop
           muted
-          className="absolute top-0 left-0 w-full h-full object-cover opacity-45 mix-blend-overlay -z-50"
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-30 mix-blend-overlay "
         >
           <source src={Pexels} type="video/mp4" />
         </video>
@@ -45,20 +45,14 @@ function App() {
           <Formik
             initialValues={InitialValues}
             onSubmit={handleSubmit}
-            validationSchema={validationschema}
+            validationSchema={validationSchema}
           >
-            {({
-              values,
-              errors,
-              touched,
-              handleChange,
-              handleBlur,
-              handleSubmit,
-              isSubmitting,
-              /* and other goodies */
-            }) => (
-              <form onSubmit={handleSubmit} className="bg-white p-8 w-96">
-                <h1 className="text-4xl font-bold text-primary text-left">
+            {({ handleSubmit, isSubmitting }) => (
+              <form
+                onSubmit={handleSubmit}
+                className="p-8 w-96 mb-20 rounded-lg font-sans shadow-lg shadow-yellow-900/50  z-0"
+              >
+                <h1 className="text-4xl font-bold text-center origin-top-left rotate-2 hover:origin-top bg-slate-900 text-white shadow-lg shadow-blue-900/50">
                   Signup
                 </h1>
                 <div className="mt-8">
@@ -100,7 +94,15 @@ function App() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-slate-900 p-4 text-white mt-4 font-black"
+                    className="w-full bg-slate-900 p-4 text-white mt-4 font-black
+                    rounded-lg
+                    hover:bg-blue-700
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-blue-400
+                    focus:ring-opacity-75
+                    shadow-lg shadow-blue-900/50
+                    "
                   >
                     Submit
                   </button>

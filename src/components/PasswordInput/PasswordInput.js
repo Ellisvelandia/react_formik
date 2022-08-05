@@ -12,7 +12,7 @@ const PasswordInput = ({ label, ...props }) => {
         <input
           {...field}
           {...props}
-          className="border-b border-slate-900 focus:outline-none focus:border-blue-500 w-full"
+          className="border-b border-slate-900 focus:outline-none focus:border-blue-500 w-full bg-transparent placeholder-gray-900"
           type={type}
         />
         {type === "password" ? (
