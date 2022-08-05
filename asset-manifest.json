@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react_formik/static/css/main.a3777f22.css",
+    "main.js": "/react_formik/static/js/main.498ed350.js",
+    "static/js/787.c2352225.chunk.js": "/react_formik/static/js/787.c2352225.chunk.js",
+    "static/media/pexels.mp4": "/react_formik/static/media/pexels.bb01940cf5ebfe105564.mp4",
+    "index.html": "/react_formik/index.html",
+    "main.a3777f22.css.map": "/react_formik/static/css/main.a3777f22.css.map",
+    "main.498ed350.js.map": "/react_formik/static/js/main.498ed350.js.map",
+    "787.c2352225.chunk.js.map": "/react_formik/static/js/787.c2352225.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a3777f22.css",
+    "static/js/main.498ed350.js"
+  ]
+}
